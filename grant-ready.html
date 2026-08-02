@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Grant Ready · Pathfinder Strategies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#2A3D44;--pine:#3A6C6C;--paper:#EEEFF0;--card:#FFFFFF;--stone:#6A777C;--line:#D0D4D6;
+    --trail:#BE9244;--trail-soft:#E7D3AC;--warn:#8A3B2F;--weak-bg:#F6DED8;--strong-bg:#E2EDED;
+    --shadow:0 1px 2px rgba(42,61,68,.06), 0 8px 28px rgba(42,61,68,.07);--radius:14px;}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Carlito",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--trail-soft);color:var(--ink)}
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(238,239,240,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+  .topbar__in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .wordmark{font-family:"Playfair Display SC",serif;font-weight:700;letter-spacing:.14em;font-size:15px;color:var(--ink);text-transform:uppercase;line-height:1;white-space:nowrap}
+  .wordmark span{display:block;font-size:9.5px;letter-spacing:.34em;color:var(--pine);margin-top:3px}
+  .progress{display:flex;align-items:center;gap:10px;min-width:0}
+  .progress__track{width:120px;height:6px;border-radius:99px;background:#D9DDE0;overflow:hidden}
+  .progress__fill{height:100%;width:0%;background:linear-gradient(90deg,var(--pine),var(--trail));border-radius:99px;transition:width .45s cubic-bezier(.4,0,.2,1)}
+  .progress__txt{font-size:12.5px;letter-spacing:.04em;color:var(--stone);white-space:nowrap}
+  @media (max-width:560px){.progress__track{width:70px}.wordmark span{display:none}}
+  .hero{position:relative;overflow:hidden}
+  .hero__in{max-width:1180px;margin:0 auto;padding:60px 24px 26px;position:relative;z-index:2}
+  .eyebrow{font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--trail);font-weight:700;margin:0 0 18px}
+  .hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2.3rem,6vw,4rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 18px;max-width:13ch}
+  .hero h1 em{font-style:italic;color:var(--pine)}
+  .hero__lead{font-size:clamp(1.05rem,2.2vw,1.28rem);max-width:56ch;color:#33484B;margin:0 0 26px}
+  .privacy{font-size:13.5px;color:var(--stone);display:flex;align-items:center;gap:8px;margin:0 0 28px}
+  .privacy svg{flex:none}
+  .trailline{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5}
+  .trailline path{fill:none;stroke:var(--trail);stroke-width:1.5;stroke-dasharray:3 7;opacity:.5}
+  .orgrow{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);max-width:560px}
+  .orgrow label{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);font-weight:700;margin-bottom:7px}
+  .orgrow .field{flex:1 1 240px}.orgrow input{width:100%}
+  input[type=text],input[type=email]{font-family:"Carlito",sans-serif;font-size:16px;color:var(--ink);background:var(--card);
+    border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;width:100%;transition:border-color .2s,box-shadow .2s}
+  input:focus{outline:none;border-color:var(--pine);box-shadow:0 0 0 3px rgba(58,108,108,.14)}
+  .primer{max-width:1180px;margin:8px auto 0;padding:0 24px}
+  .primer__card{background:var(--ink);color:#EDF1F2;border-radius:18px;padding:28px 30px;box-shadow:0 16px 44px rgba(42,61,68,.18)}
+  .primer__k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--trail-soft);font-weight:700;margin:0 0 10px}
+  .primer__card h2{font-family:"Playfair Display",serif;font-weight:500;font-size:1.55rem;margin:0 0 12px;color:#fff}
+  .primer__card p{font-size:15.5px;line-height:1.62;color:#D3DDE0;margin:0 0 12px;max-width:70ch}
+  .primer__card p:last-child{margin-bottom:0}.primer__card b{color:#fff;font-weight:700}
+  .primer__q{font-family:"Playfair Display",serif;font-style:italic;font-size:1.18rem;color:var(--trail-soft);border-left:3px solid var(--trail);padding-left:16px;margin:16px 0 !important}
+  .wrap{max-width:1180px;margin:0 auto;padding:30px 24px 90px;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:48px;align-items:start}
+  @media (max-width:900px){.wrap{grid-template-columns:1fr;gap:30px}}
+  .builder{position:relative;padding-left:8px}
+  .builder::before{content:"";position:absolute;left:21px;top:18px;bottom:42px;width:2px;background:linear-gradient(180deg,var(--trail-soft),var(--line));border-radius:2px}
+  @media (max-width:560px){.builder::before{left:17px}}
+  .stop{position:relative;padding:6px 0 34px 56px}
+  @media (max-width:560px){.stop{padding-left:44px}}
+  .stop__dot{position:absolute;left:8px;top:4px;width:28px;height:28px;border-radius:50%;background:var(--paper);border:2px solid var(--line);
+    color:var(--stone);display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:14px;font-weight:600;transition:all .3s ease;z-index:2}
+  @media (max-width:560px){.stop__dot{left:2px}}
+  .stop.done .stop__dot{background:var(--trail);border-color:var(--trail);color:#fff;box-shadow:0 0 0 5px rgba(190,146,68,.16)}
+  .stop__kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--trail);font-weight:700;margin:0 0 5px}
+  .stop h2{font-family:"Playfair Display",serif;font-weight:500;font-size:1.42rem;line-height:1.15;margin:0 0 12px;letter-spacing:-.005em}
+  .nugget{font-size:14px;line-height:1.55;color:#33484B;background:#E2EDED;border-radius:10px;padding:11px 14px;margin:0 0 12px}
+  .nugget b{color:var(--pine)}.nugget::before{content:"Why funders care — ";font-weight:700;color:var(--pine)}
+  .strong-looks{font-size:13px;color:var(--stone);margin:0 0 14px;padding-left:2px}
+  .strong-looks b{color:var(--pine);font-weight:700}
+  .choice{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .choice label{position:relative;display:block}
+  .choice input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+  .choice span{display:block;text-align:center;font-size:13.5px;font-weight:700;color:var(--stone);background:var(--card);
+    border:1.5px solid var(--line);border-radius:9px;padding:11px 8px;cursor:pointer;transition:all .15s;line-height:1.2}
+  .choice label:hover span{border-color:var(--pine)}
+  .choice input:checked + span{background:#EEEFF0;border-color:var(--ink);color:var(--ink)}
+  .choice input:focus-visible + span{outline:2px solid var(--trail-soft);outline-offset:2px}
+  .panel{position:sticky;top:84px}@media (max-width:900px){.panel{position:static}}
+  .panel__card{background:var(--ink);color:#EDF1F2;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(42,61,68,.22)}
+  .panel__head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .panel__head h3{font-family:"Playfair Display",serif;font-weight:500;font-size:1.15rem;margin:0;color:#fff}
+  .panel__head .count{font-size:12px;letter-spacing:.05em;color:var(--trail-soft)}
+  .doc{padding:24px 24px 8px}
+  .scorewrap{display:flex;align-items:baseline;gap:10px;margin:0 0 4px}
+  .scorenum{font-family:"Playfair Display",serif;font-weight:600;font-size:3.2rem;color:#fff;line-height:1}
+  .scoremax{font-size:1.05rem;color:var(--trail-soft)}
+  .band{font-family:"Playfair Display",serif;font-style:italic;font-size:1.2rem;color:var(--trail-soft);margin:0 0 10px}
+  .verdict{font-size:14.5px;color:#D3DDE0;margin:0;line-height:1.55}
+  .gate{font-size:13px;color:#F0CFC6;background:rgba(155,59,47,.3);border-radius:8px;padding:9px 12px;margin:12px 0 0;line-height:1.45}
+  .rlist{margin:20px 0 0}
+  .rlist h4{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--trail);font-weight:700;margin:0 0 8px}
+  .rlist ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+  .rlist li{font-size:13.5px;color:#D3DDE0;padding-left:22px;position:relative;line-height:1.45}
+  .rlist li.good::before{content:"\2713";position:absolute;left:0;color:#8FBFBF;font-weight:700}
+  .rlist li.gap::before{content:"!";position:absolute;left:2px;color:var(--trail-soft);font-weight:700}
+  .rlist .step{display:block;color:#8FA0A4;font-size:12.5px;margin-top:2px}
+  .rlist .ph{color:#7E9094;font-style:italic;font-size:13.5px}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;padding:18px 22px 22px;border-top:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.12)}
+  .btn{font-family:"Carlito",sans-serif;font-size:14.5px;font-weight:700;letter-spacing:.02em;border-radius:10px;padding:11px 16px;cursor:pointer;
+    border:1.5px solid transparent;transition:transform .12s ease,background .2s,border-color .2s;display:inline-flex;align-items:center;gap:8px}
+  .btn:active{transform:translateY(1px)}
+  .btn--gold{background:var(--trail);color:#1a1408;border-color:var(--trail)}.btn--gold:hover{background:#cda257}
+  .btn--ghost{background:transparent;color:#EDF1F2;border-color:rgba(255,255,255,.28)}.btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+  .btn--ink{background:var(--ink);color:#fff;border-color:var(--ink);text-decoration:none}.btn--ink:hover{background:var(--pine)}
+  .btn:focus-visible{outline:2px solid var(--trail-soft);outline-offset:2px}
+  .recap{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow)}
+  .recap h3{font-family:"Playfair Display",serif;font-weight:500;font-size:1.2rem;margin:0 0 4px}
+  .recap__sub{font-size:13.5px;color:var(--stone);margin:0 0 16px}
+  .recap ol{margin:0;padding-left:0;list-style:none;counter-reset:r;display:grid;gap:10px}
+  .recap li{position:relative;padding-left:38px;font-size:14.5px;line-height:1.45;counter-increment:r}
+  .recap li::before{content:counter(r);position:absolute;left:0;top:-1px;width:25px;height:25px;border-radius:50%;background:var(--strong-bg);
+    color:var(--pine);font-family:"Playfair Display",serif;font-size:13px;font-weight:600;display:grid;place-items:center}
+  .arrival{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow)}
+  .finish h3{font-family:"Playfair Display",serif;font-weight:500;font-size:1.25rem;margin:0 0 8px}
+  .finish p{font-size:14.5px;color:var(--stone);margin:0 0 16px}
+  .finish__actions{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 2px}
+  .find{font-family:"Playfair Display SC",serif;letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:var(--trail);margin:16px 0 0;font-weight:600}
+  .modal{position:fixed;inset:0;z-index:120;display:none}.modal.open{display:block}
+  .modal__backdrop{position:absolute;inset:0;background:rgba(42,61,68,.55)}
+  .modal__dialog{position:relative;max-width:440px;margin:10vh auto 0;width:calc(100% - 40px);background:var(--card);border-radius:18px;
+    box-shadow:0 30px 80px rgba(42,61,68,.4);padding:30px 30px 26px;animation:pop .25s cubic-bezier(.2,.8,.3,1)}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+  .modal__x{position:absolute;top:12px;right:15px;border:none;background:none;font-size:26px;line-height:1;color:var(--stone);cursor:pointer;padding:4px}
+  .modal__x:hover{color:var(--ink)}
+  .modal__eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--trail);font-weight:700;margin:0 0 8px}
+  .modal__dialog h3{font-family:"Playfair Display",serif;font-weight:500;font-size:1.5rem;margin:0 0 8px;color:var(--ink)}
+  .modal__sub{font-size:14.5px;color:var(--stone);margin:0 0 20px}
+  .modal__field{margin:0 0 14px}
+  .modal__field label{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--stone);font-weight:700;margin:0 0 6px}
+  .modal__field label span{text-transform:none;letter-spacing:0;font-weight:400}
+  .modal__err{color:var(--warn);font-size:13.5px;margin:2px 0 12px}
+  .modal__go{width:100%;justify-content:center;margin-top:4px}
+  .modal__fine{font-size:12px;color:var(--stone);text-align:center;margin:12px 0 0;line-height:1.4}
+  .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 22px;
+    border-radius:99px;font-size:14px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:all .3s ease;z-index:99}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+  .reveal.d1{animation-delay:.08s}.reveal.d2{animation-delay:.16s}.reveal.d3{animation-delay:.24s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+  @media print{.topbar,.hero,.primer,.builder,.toolbar,.recap,.arrival{display:none!important}body{background:#fff}
+    .wrap{display:block;padding:0}.panel{position:static}.panel__card{background:#fff;color:#000;box-shadow:none;border:1px solid #ccc}
+    .scorenum,.verdict,.rlist li{color:#000}.rlist .step{color:#444}}
+.brandlock{display:flex;align-items:center;gap:11px;min-width:0}.brandlock .emblem{width:34px;height:34px;flex:none;display:block}@media (max-width:560px){.brandlock .emblem{width:28px;height:28px}.brandlock{gap:8px}}@media print{.brandlock .emblem{width:30px;height:30px}}
+  .disclaimer{font-size:12.5px;line-height:1.5;color:var(--stone);background:#F6DED8;border-radius:10px;padding:11px 14px;margin:16px 0 0;text-align:left}
+  .disclaimer b{color:#8A3B2F}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <div class="brandlock"><img class="emblem" src="data:image/png;base64,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" alt="Pathfinder Strategies emblem" /><div class="wordmark">Pathfinder<span>Strategies</span></div></div>
+    <div class="progress" aria-hidden="true">
+      <div class="progress__track"><div class="progress__fill" id="pfill"></div></div>
+      <div class="progress__txt"><span id="pcount">0</span> / 8 checks</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="trailline" viewBox="0 0 1180 360" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20,300 C200,250 240,120 460,150 C700,182 720,40 980,80 C1120,100 1160,60 1220,70"/>
+  </svg>
+  <div class="hero__in">
+    <p class="eyebrow reveal">Grant Ready — a Pathfinder Strategies tool</p>
+    <h1 class="reveal d1">Are you <em>grant ready</em>?</h1>
+    <p class="hero__lead reveal d2">Grants feel like free money — until you've sunk 40 hours into an application you were never going to win. Answer eight honest questions and find out where you really stand, and exactly what to fix first.</p>
+    <p class="privacy reveal d2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6A777C" stroke-width="2"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      Your answers stay in your browser. When you download or print, we'll ask where to send your report.
+    </p>
+    <div class="orgrow reveal d3">
+      <div class="field">
+        <label for="org">Your organization's name</label>
+        <input type="text" id="org" placeholder="e.g. Riverside Reading Project" autocomplete="off">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="primer">
+  <div class="primer__card reveal d3">
+    <p class="primer__k">Start here · 2 minutes</p>
+    <h2>Should you even apply for a grant?</h2>
+    <p>Grants look like free money, so small nonprofits chase them first. But they're competitive and slow — and most rejections aren't about bad writing. They're about <b>bad fit, or an organization that wasn't ready.</b></p>
+    <p class="primer__q">A grant you weren't ready for isn't free money. It's 40 hours you'll never get back.</p>
+    <p>This check looks at the eight things foundation, corporate, and community funders actually look for — where most small nonprofits play. Answer honestly and you'll get a clear readiness score, your strengths, and the exact gaps to fix before you write a word.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="builder">
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">1</div>
+      <p class="stop__kicker">Check 1 · Tax-exempt status</p>
+      <h2>Are you a registered 501(c)(3) in good standing?</h2>
+      <p class="nugget">Almost every funder requires proof of tax-exempt status before they'll even read your proposal. No status, no grant — full stop.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> a current 501(c)(3) determination letter, or a fiscal sponsor who has one.</p>
+      <div class="choice" data-q="q1">
+        <label><input type="radio" name="q1" value="2"><span>Yes, in good standing</span></label>
+        <label><input type="radio" name="q1" value="1"><span>In progress / sponsor</span></label>
+        <label><input type="radio" name="q1" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">2</div>
+      <p class="stop__kicker">Check 2 · A specific need</p>
+      <h2>Can you state the problem with real, specific data?</h2>
+      <p class="nugget">Funders fund problems they can see. "We help the community" loses. "120 kids in our county are on a tutoring waitlist" wins.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> a need statement backed by a local number. (Our <b>Make Your Case</b> tool helps here.)</p>
+      <div class="choice" data-q="q2">
+        <label><input type="radio" name="q2" value="2"><span>Yes, with data</span></label>
+        <label><input type="radio" name="q2" value="1"><span>Roughly</span></label>
+        <label><input type="radio" name="q2" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">3</div>
+      <p class="stop__kicker">Check 3 · Measurable outcomes</p>
+      <h2>Do you track results and know what success looks like in numbers?</h2>
+      <p class="nugget">Funders buy outcomes, not activities. They want to know what changes because of your work — and how you'll measure it.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> "84% of kids gained a reading level," not "we served many children."</p>
+      <div class="choice" data-q="q3">
+        <label><input type="radio" name="q3" value="2"><span>Yes, we track it</span></label>
+        <label><input type="radio" name="q3" value="1"><span>Somewhat</span></label>
+        <label><input type="radio" name="q3" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">4</div>
+      <p class="stop__kicker">Check 4 · A real budget</p>
+      <h2>Do you have an annual budget and a budget for the project?</h2>
+      <p class="nugget">A proposal lives or dies on a credible budget. Funders want to see you've costed the work, not guessed at it.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> a board-approved annual budget plus a line-item budget for the specific project.</p>
+      <div class="choice" data-q="q4">
+        <label><input type="radio" name="q4" value="2"><span>Both, ready</span></label>
+        <label><input type="radio" name="q4" value="1"><span>One of them</span></label>
+        <label><input type="radio" name="q4" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">5</div>
+      <p class="stop__kicker">Check 5 · Financial records</p>
+      <h2>Are your financials in order?</h2>
+      <p class="nugget">Funders are trusting you with money, so they check whether you handle it well. Messy or missing records end an application fast.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> current financial statements, and a filed Form 990 if your size requires one.</p>
+      <div class="choice" data-q="q5">
+        <label><input type="radio" name="q5" value="2"><span>Yes, current</span></label>
+        <label><input type="radio" name="q5" value="1"><span>Mostly</span></label>
+        <label><input type="radio" name="q5" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">6</div>
+      <p class="stop__kicker">Check 6 · Capacity to deliver</p>
+      <h2>Can you run the program AND handle the reporting?</h2>
+      <p class="nugget">Funders worry whether you can actually deliver — and report back. A grant you can't report on can cost you the next one.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> a named person who owns delivery, and a plan for who handles grant reporting.</p>
+      <div class="choice" data-q="q6">
+        <label><input type="radio" name="q6" value="2"><span>Yes, covered</span></label>
+        <label><input type="radio" name="q6" value="1"><span>Stretched</span></label>
+        <label><input type="radio" name="q6" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">7</div>
+      <p class="stop__kicker">Check 7 · Funder fit</p>
+      <h2>Have you found funders who actually fund your work?</h2>
+      <p class="nugget">Most rejections are bad fit, not bad writing. A funder who doesn't fund your cause, your area, or your size will never say yes — no matter how good the proposal.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> a short list of 3–5 funders who fund your cause, in your area, at your grant size.</p>
+      <div class="choice" data-q="q7">
+        <label><input type="radio" name="q7" value="2"><span>Yes, a short list</span></label>
+        <label><input type="radio" name="q7" value="1"><span>A few ideas</span></label>
+        <label><input type="radio" name="q7" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+    <div class="stop" data-stop>
+      <div class="stop__dot">8</div>
+      <p class="stop__kicker">Check 8 · Evidence it works</p>
+      <h2>Can you show your program actually delivers?</h2>
+      <p class="nugget">New programs can still get funded, but proof lowers a funder's risk — and risk is what they're weighing.</p>
+      <p class="strong-looks"><b>Strong looks like:</b> a result you can point to and one real story of someone it changed.</p>
+      <div class="choice" data-q="q8">
+        <label><input type="radio" name="q8" value="2"><span>Yes, results + story</span></label>
+        <label><input type="radio" name="q8" value="1"><span>A little</span></label>
+        <label><input type="radio" name="q8" value="0"><span>Not yet</span></label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel">
+    <div class="panel__card">
+      <div class="panel__head">
+        <h3>Your readiness</h3>
+        <span class="count"><span id="dcount">0</span>/8 answered</span>
+      </div>
+      <div class="doc" id="doc">
+        <div class="scorewrap"><span class="scorenum" id="scoreNum">0</span><span class="scoremax">/ 16</span></div>
+        <p class="band" id="band">Answer the checks to see where you stand</p>
+        <p class="verdict" id="verdict">As you answer, your score, strengths, and the gaps to fix first will appear here.</p>
+        <div class="gate" id="gate" style="display:none"></div>
+        <div class="rlist" id="strengths"></div>
+        <div class="rlist" id="gaps"></div>
+      </div>
+      <div class="toolbar">
+        <button class="btn btn--gold" id="copyBtn">Copy report</button>
+        <button class="btn btn--ghost" id="dlBtn">Download</button>
+        <button class="btn btn--ghost" id="printBtn">Print</button>
+      </div>
+    </div>
+
+    <div class="recap">
+      <h3>The 8 marks of a grant-ready nonprofit</h3>
+      <p class="recap__sub">Whatever you scored, this is the bar — and a checklist to work toward:</p>
+      <ol>
+        <li>Tax-exempt status (or a fiscal sponsor).</li>
+        <li>A specific, data-backed need.</li>
+        <li>Outcomes you measure in numbers.</li>
+        <li>An annual budget and a project budget.</li>
+        <li>Financial records in order.</li>
+        <li>Capacity to deliver and to report.</li>
+        <li>Funders who actually fit your work.</li>
+        <li>Evidence — results and a story — that it works.</li>
+      </ol>
+    </div>
+
+    <div class="arrival">
+      <div class="finish">
+        <h3>Know where you stand. Now close the gap.</h3>
+        <p>Print your report and work the list — then let's talk. If you're ready, grant writing is what I do. If you're not yet, getting you ready is too.</p>
+        <div class="finish__actions">
+          <button class="btn btn--gold" id="printBtn2">Print your report</button>
+          <a class="btn btn--ink" id="calLink" href="#" target="_blank" rel="noopener">Schedule a call with Gavin →</a>
+        </div>
+        <p class="disclaimer"><b>Not your lawyer or your CPA:</b> this is general guidance, not legal or financial advice. For your tax-exempt status, your financials, or your 990, talk to a CPA or attorney — cheaper than the fines for guessing.</p>
+        <p class="find">Find the way forward.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="leadModal" aria-hidden="true">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+    <button class="modal__x" id="leadClose" aria-label="Close">&times;</button>
+    <p class="modal__eyebrow">One last thing</p>
+    <h3 id="leadTitle">Where should we send your report?</h3>
+    <p class="modal__sub">Add your details and your readiness report is yours to keep. We'll send it over with a few notes on closing the gaps — and nothing more.</p>
+    <div class="modal__field"><label for="lead_name">Your name</label><input type="text" id="lead_name" autocomplete="name" placeholder="Jordan Rivera"></div>
+    <div class="modal__field"><label for="lead_email">Email</label><input type="email" id="lead_email" autocomplete="email" placeholder="you@organization.org"></div>
+    <div class="modal__field"><label for="lead_org">Organization <span>(optional)</span></label><input type="text" id="lead_org" autocomplete="organization" placeholder=""></div>
+    <p class="modal__err" id="leadErr" hidden>Add your name and a valid email to continue.</p>
+    <button class="btn btn--gold modal__go" id="leadGo">Send &amp; continue</button>
+    <p class="modal__fine">We'll only use this to send your report and the occasional Pathfinder note. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast">Copied to your clipboard</div>
+
+<script>
+(function(){
+  // ▼▼▼ REPLACE with your scheduling link ▼▼▼
+  var CAL_URL = "https://pathfinderstrategies.org";
+  // ▼▼▼ REPLACE with your form endpoint (Formspree, Web3Forms, webhook). Leave "" and the popup still works, but leads won't be delivered. ▼▼▼
+  var LEAD_ENDPOINT = "";
+  // ▲▲▲ ------------------------------------------------- ▲▲▲
+
+  var DIMS=[
+    {id:"q1",label:"Tax-exempt status",fix:"Get your 501(c)(3) in place — or partner with a fiscal sponsor — before applying. It's a prerequisite for almost every funder."},
+    {id:"q2",label:"A specific need",fix:"Sharpen your need into one specific, data-backed sentence. (Make Your Case helps with this.)"},
+    {id:"q3",label:"Measurable outcomes",fix:"Decide what success looks like in numbers, and start tracking it now — before you apply."},
+    {id:"q4",label:"A real budget",fix:"Build a board-approved annual budget and a line-item budget for the project you'd fund."},
+    {id:"q5",label:"Financial records",fix:"Get your financial statements current, and file your Form 990 if your size requires it."},
+    {id:"q6",label:"Capacity to deliver",fix:"Name who will run the program and who will handle grant reporting before you apply."},
+    {id:"q7",label:"Funder fit",fix:"Research 3–5 funders who fund your cause, in your area, at your grant size, before writing a word."},
+    {id:"q8",label:"Evidence it works",fix:"Capture one defensible outcome and one real story that show your program delivers."}
+  ];
+  var orgEl=document.getElementById("org");
+  function val(q){ var r=document.querySelector('input[name="'+q+'"]:checked'); return r?parseInt(r.value,10):null; }
+  function org(){ return (orgEl.value||"").trim(); }
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  function bandFor(score){
+    if(score>=13) return {name:"Grant-ready",
+      verdict:"You're in strong shape to pursue grants. Your foundation is solid — now it comes down to funder fit and a sharp, specific proposal."};
+    if(score>=7) return {name:"Almost there",
+      verdict:"You're close. A few gaps stand between you and a competitive application — close those first and your odds jump."};
+    return {name:"Build your foundation first",
+      verdict:"Grants probably aren't your fastest money right now. Build the basics below first — and meanwhile, individual giving may move faster (see Make Your Case and Make Your Ask)."};
+  }
+
+  function render(){
+    var answered=0, score=0, strengths=[], gaps=[];
+    DIMS.forEach(function(d){
+      var x=val(d.id);
+      if(x!==null){ answered++; score+=x; if(x===2) strengths.push(d); else gaps.push(d); }
+      var stop=document.querySelector('[data-q="'+d.id+'"]').closest("[data-stop]");
+      stop.classList.toggle("done", x!==null);
+    });
+    document.getElementById("pfill").style.width=(answered/8*100)+"%";
+    document.getElementById("pcount").textContent=answered;
+    document.getElementById("dcount").textContent=answered;
+    document.getElementById("scoreNum").textContent=score;
+
+    var b=bandFor(score);
+    if(answered===0){
+      document.getElementById("band").textContent="Answer the checks to see where you stand";
+      document.getElementById("verdict").textContent="As you answer, your score, strengths, and the gaps to fix first will appear here.";
+    } else {
+      document.getElementById("band").textContent=b.name;
+      document.getElementById("verdict").textContent=b.verdict;
+    }
+
+    var gate=document.getElementById("gate");
+    if(val("q1")===0){
+      gate.style.display="block";
+      gate.textContent="Heads up: without tax-exempt status (or a fiscal sponsor), most grants are off the table until that's solved — whatever else you score.";
+    } else { gate.style.display="none"; gate.textContent=""; }
+
+    var sEl=document.getElementById("strengths");
+    if(strengths.length){
+      sEl.innerHTML="<h4>Your strengths</h4><ul>"+strengths.map(function(d){return '<li class="good">'+esc(d.label)+'</li>';}).join("")+"</ul>";
+    } else sEl.innerHTML="";
+
+    var gEl=document.getElementById("gaps");
+    if(gaps.length){
+      gEl.innerHTML="<h4>Fix these first</h4><ul>"+gaps.map(function(d){
+        return '<li class="gap">'+esc(d.label)+'<span class="step">'+esc(d.fix)+'</span></li>';
+      }).join("")+"</ul>";
+    } else gEl.innerHTML="";
+  }
+  DIMS.forEach(function(d){
+    document.querySelectorAll('input[name="'+d.id+'"]').forEach(function(r){ r.addEventListener("change",render); });
+  });
+  orgEl.addEventListener("input",render);
+
+  function exportText(){
+    var answered=0, score=0, strengths=[], gaps=[];
+    DIMS.forEach(function(d){ var x=val(d.id); if(x!==null){answered++;score+=x;(x===2?strengths:gaps).push(d);} });
+    var b=bandFor(score), L=[];
+    L.push("# "+(org()||"Your Organization")+" — Grant Readiness Report"); L.push("");
+    L.push("**Score:** "+score+" / 16 — "+(answered? b.name : "not yet completed")); L.push("");
+    if(answered) L.push(b.verdict); L.push("");
+    if(val("q1")===0){ L.push("> Heads up: without tax-exempt status (or a fiscal sponsor), most grants are off the table until that's solved."); L.push(""); }
+    L.push("## Your strengths");
+    L.push(strengths.length ? strengths.map(function(d){return "- "+d.label;}).join("\n") : "[ none marked strong yet ]"); L.push("");
+    L.push("## Fix these first");
+    L.push(gaps.length ? gaps.map(function(d){return "- "+d.label+": "+d.fix;}).join("\n") : "[ no gaps — you're in strong shape ]"); L.push("");
+    L.push("---"); L.push("Drafted with Grant Ready · Pathfinder Strategies · pathfinderstrategies.org");
+    return L.join("\n");
+  }
+
+  function toast(msg){ var t=document.getElementById("toast"); t.textContent=msg; t.classList.add("show");
+    clearTimeout(t._h); t._h=setTimeout(function(){ t.classList.remove("show"); },2200); }
+  function doCopy(){ var txt=exportText();
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){toast("Report copied to your clipboard");},function(){legacyCopy(txt);}); }
+    else legacyCopy(txt); }
+  function legacyCopy(txt){ var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select(); try{document.execCommand("copy");toast("Report copied to your clipboard");}catch(e){toast("Press Ctrl/Cmd-C to copy");}
+    document.body.removeChild(ta); }
+  function doDownload(){ var name=(org()||"Grant_Readiness").replace(/[^a-z0-9]+/gi,"_").replace(/^_|_$/g,"");
+    var blob=new Blob([exportText()],{type:"text/markdown"}); var a=document.createElement("a");
+    a.href=URL.createObjectURL(blob); a.download=name+"_Grant_Readiness.md"; document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);document.body.removeChild(a);},100); toast("Downloaded your report"); }
+  function doPrint(){ window.print(); }
+
+  var captured=false, pending=null, modal=document.getElementById("leadModal");
+  function gate(action){ if(captured){ action(); return; } pending=action;
+    document.getElementById("lead_org").value=org();
+    modal.classList.add("open"); modal.setAttribute("aria-hidden","false");
+    setTimeout(function(){ document.getElementById("lead_name").focus(); },40); }
+  function closeModal(){ modal.classList.remove("open"); modal.setAttribute("aria-hidden","true"); }
+  function validEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+  function submitLead(){
+    var name=document.getElementById("lead_name").value.trim();
+    var email=document.getElementById("lead_email").value.trim();
+    var o=document.getElementById("lead_org").value.trim();
+    if(!name||!validEmail(email)){ document.getElementById("leadErr").hidden=false; return; }
+    document.getElementById("leadErr").hidden=true;
+    if(LEAD_ENDPOINT){ try{ fetch(LEAD_ENDPOINT,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify({name:name,email:email,organization:o,source:"Grant Ready"})}).catch(function(){}); }catch(e){} }
+    captured=true; closeModal(); if(pending){ var a=pending; pending=null; a(); }
+  }
+
+  document.getElementById("copyBtn").addEventListener("click",doCopy);
+  document.getElementById("dlBtn").addEventListener("click",function(){gate(doDownload);});
+  document.getElementById("printBtn").addEventListener("click",function(){gate(doPrint);});
+  document.getElementById("printBtn2").addEventListener("click",function(){gate(doPrint);});
+  document.getElementById("leadGo").addEventListener("click",submitLead);
+  document.getElementById("leadClose").addEventListener("click",closeModal);
+  modal.querySelector("[data-close]").addEventListener("click",closeModal);
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && modal.classList.contains("open")) closeModal(); });
+  document.getElementById("lead_email").addEventListener("keydown",function(e){ if(e.key==="Enter") submitLead(); });
+  document.getElementById("calLink").setAttribute("href",CAL_URL);
+  render();
+})();
+</script>
+</body>
+</html>
